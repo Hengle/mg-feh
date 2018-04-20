@@ -8,6 +8,7 @@ namespace FireEmblemHeroes
 {
   public abstract class Weapon
   {
+    public abstract int Might { get; }
     public abstract int Range { get; }
     public abstract WeaponColor Color { get; }
     public abstract WeaponType Type { get; }

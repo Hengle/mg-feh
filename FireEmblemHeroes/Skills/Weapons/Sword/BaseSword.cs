@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace FireEmblemHeroes
 {
-  public class IronLance : Weapon
+  public abstract class BaseSword : Weapon
   {
     public override int Range => 1;
-    public override WeaponColor Color => WeaponColor.Blue;
-    public override WeaponType Type => WeaponType.Lance;
+    public override WeaponColor Color => WeaponColor.Red;
+    public override WeaponType Type => WeaponType.Sword;
   }
 }
