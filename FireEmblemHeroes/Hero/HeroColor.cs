@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace FireEmblemHeroes
 {
-  public abstract class BaseRedBreath : BaseBreath
+  public enum HeroColor
   {
+    Red,
+    Green,
+    Blue,
+    Colorless,
   }
 }

@@ -9,5 +9,6 @@ namespace FireEmblemHeroes
   public class InfantrySword : Hero
   {
     public override HeroMovementType Movement => HeroMovementType.Infantry;
+    public override HeroColor Color => HeroColor.Red;
   }
 }

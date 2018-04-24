@@ -46,7 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AI\BaseHeroAI.cs" />
-    <Compile Include="Hero\Heroes\InfantryBow.cs" />
+    <Compile Include="Hero\HeroColor.cs" />
     <Compile Include="Hero\Heroes\InfantrySword.cs" />
     <Compile Include="Hero\Heroes\InfantryAxe.cs" />
     <Compile Include="Hero\Heroes\InfantryLance.cs" />
@@ -77,11 +77,7 @@
     <Compile Include="Skills\Weapons\Bow\Green\BaseGreenBow.cs" />
     <Compile Include="Skills\Weapons\Bow\Red\BaseRedBow.cs" />
     <Compile Include="Skills\Weapons\Dagger\BaseDagger.cs" />
-    <Compile Include="Skills\Weapons\Dragon\BaseBreath.cs" />
-    <Compile Include="Skills\Weapons\Dragon\Blue\BaseBlueBreath.cs" />
-    <Compile Include="Skills\Weapons\Dragon\Colorless\BaseColorlessBreath.cs" />
-    <Compile Include="Skills\Weapons\Dragon\Green\BaseGreenBreath.cs" />
-    <Compile Include="Skills\Weapons\Dragon\Red\BaseRedBreath.cs" />
+    <Compile Include="Skills\Weapons\Breath\BaseBreath.cs" />
     <Compile Include="Skills\Weapons\Lance\BaseLance.cs" />
     <Compile Include="Skills\Weapons\Staff\BaseStaff.cs" />
     <Compile Include="Skills\Weapons\Sword\BaseSword.cs" />

@@ -9,6 +9,7 @@ namespace FireEmblemHeroes
   public abstract class Hero
   {
     public abstract HeroMovementType Movement { get; }
+    public abstract HeroColor Color { get; }
 
     public HeroStats BaseStats;
 

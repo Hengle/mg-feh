@@ -12,5 +12,6 @@ namespace FireEmblemHeroes
     Red,
     Green,
     Blue,
+    Breath,
   }
 }

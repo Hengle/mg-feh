@@ -8,5 +8,7 @@ namespace FireEmblemHeroes
 {
   public abstract class BaseBreath : Weapon
   {
+    public override WeaponType Type => WeaponType.Dragon;
+    public override WeaponColor Color => WeaponColor.Breath;
   }
 }
