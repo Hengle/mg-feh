@@ -15,5 +15,13 @@ namespace FireEmblemHeroes
     {
       _moves = moves;
     }
+
+    void IMove.Do()
+    {
+      foreach (var move in _moves)
+      {
+        move.Do();
+      }
+    }
   }
 }

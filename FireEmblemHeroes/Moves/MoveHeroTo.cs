@@ -22,5 +22,10 @@ namespace FireEmblemHeroes
       _map = map;
       _pushed = pushed;
     }
+
+    void IMove.Do()
+    {
+      _hero.Location = _cell.Location;
+    }
   }
 }

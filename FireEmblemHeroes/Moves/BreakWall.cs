@@ -16,5 +16,11 @@ namespace FireEmblemHeroes
       _hero = hero;
       _cell = cell;
     }
+
+    void IMove.Do()
+    {
+      _cell.IsBroken = true;
+      _hero.CanAct = false;
+    }
   }
 }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace FireEmblemHeroes
 {
-  public abstract class BaseBreath : Weapon
+  public abstract class BaseBreath : Weapon<WCBreath>
   {
     public override WeaponType Type => WeaponType.Dragon;
-    public override WeaponColor Color => WeaponColor.Breath;
+    public override int Range => 1;
   }
 }

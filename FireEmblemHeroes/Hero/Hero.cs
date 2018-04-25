@@ -13,7 +13,7 @@ namespace FireEmblemHeroes
 
     public HeroStats BaseStats;
 
-    public Weapon Weapon;
+    public IWeapon Weapon;
     public AssistSkill Assist;
     public SpecialSkill Special;
 

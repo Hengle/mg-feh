@@ -14,7 +14,6 @@ namespace FireEmblemHeroes
     }
 
     public HeroState Owner { get; }
-
     public abstract IMove GetMove(MapState state);
   }
 }

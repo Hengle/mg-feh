@@ -16,5 +16,19 @@ namespace FireEmblemHeroes
       _owner = owner;
       _target = target;
     }
+
+    void IMove.Do()
+    {
+      var attack = _owner.CurrentStats.HP + _owner.Hero.Weapon.Might;
+      attack -= _target.CurrentStats.Def;
+      if (attack > 0)
+      {
+        _target.CurrentStats.HP -= attack;
+        if (_target.CurrentStats.HP < 0)
+        {
+          _target.IsDead = true;
+        }
+      }
+    }
   }
 }

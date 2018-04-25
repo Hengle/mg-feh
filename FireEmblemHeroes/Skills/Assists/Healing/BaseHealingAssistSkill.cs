@@ -10,7 +10,9 @@ namespace FireEmblemHeroes
   {
     public override IEnumerable<IMove> ValidMovesFor(MapCellLocation location, HeroState owner, HeroState target, MapState map)
     {
-      yield return new DoHealAssist(this, owner, target, map);
+      yield return new Heal(this, owner, target);
     }
+
+    public abstract (decimal ownerAmount, decimal targetAmount) GetHealAmount(HeroState owner, HeroState target);
   }
 }

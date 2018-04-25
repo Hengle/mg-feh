@@ -27,12 +27,43 @@ namespace FireEmblemHeroes
       { HeroMovementType.Infantry, 2 },
     };
 
-    private MapCellState[,] _cells;
-    private HeroState[] _heroes;
+    private readonly MapCellState[,] _cells;
+    private readonly HeroState[] _heroes;
 
-    public MapState()
+    public MapState(Map map, params HeroTeam[] teams)
     {
+      int r, c;
 
+      _cells = new MapCellState[map.Rows, map.Columns];
+      for (r = 0; r < map.Rows; ++r)
+      {
+        for (c = 0; c < map.Columns; ++c)
+        {
+          var loc = new MapCellLocation(r, c);
+          var cell = map[loc];
+          _cells[r, c] = new MapCellState(cell, loc);
+        }
+      }
+
+      _heroes = teams
+        .SelectMany(team => team.Heroes.Select((hero, i) => new HeroState(team.Id, hero, team.Locations[i])))
+        .ToArray();
+    }
+
+    public IEnumerable<HeroState> Heroes => _heroes;
+    public IEnumerable<MapCellState> Cells
+    {
+      get
+      {
+        int r, c;
+        for (r = 0; r < _cells.GetLength(0); ++r)
+        {
+          for (c = 0; c < _cells.GetLength(1); ++c)
+          {
+            yield return _cells[r, c];
+          }
+        }
+      }
     }
 
     public IMove[] GetMoves(HeroState hero)
@@ -117,7 +148,7 @@ namespace FireEmblemHeroes
         if (distance == weapon.Range)
         {
           // if cell is breakable and hasn't been broken yet, we can attack it
-          if (cell.IsBreakable && !cell.IsBroken)
+          if (cell.IsBreakable && !cell.IsBroken && owner.CanAct)
           {
             yield return new BreakWall(owner, cell);
           }

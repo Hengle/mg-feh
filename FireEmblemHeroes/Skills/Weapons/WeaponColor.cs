@@ -6,12 +6,27 @@ using System.Threading.Tasks;
 
 namespace FireEmblemHeroes
 {
-  public enum WeaponColor
+  public abstract class WeaponColor
   {
-    None,
-    Red,
-    Green,
-    Blue,
-    Breath,
+  }
+
+  public class WCNone : WeaponColor
+  {
+  }
+
+  public class WCRed : WeaponColor
+  {
+  }
+
+  public class WCGreen : WeaponColor
+  {
+  }
+
+  public class WCBlue : WeaponColor
+  {
+  }
+
+  public class WCBreath : WeaponColor
+  {
   }
 }

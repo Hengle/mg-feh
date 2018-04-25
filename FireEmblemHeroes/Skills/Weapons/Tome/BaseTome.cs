@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace FireEmblemHeroes
 {
-  public abstract class BaseTome : Weapon
+  public abstract class BaseTome<T> : Weapon<T> where T : WeaponColor, new()
   {
-    public override int Range => 2;
     public override WeaponType Type => WeaponType.Tome;
+    public override int Range => 2;
   }
 }
